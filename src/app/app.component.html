@@ -1,18 +1,13 @@
-<!-- Data Binding -->
-<input type="text" [(ngModel)]="title">
-
 <!-- Interpolación de Strings -->
-<h1>{{title}}</h1>
+<h1>{{ title }}</h1>
+
+<!-- Data Binding -->
+<input type="text" [(ngModel)]="title" />
+<button (click)="agregarAnimal()">Agregar</button>
 
 <!-- Directivas de control -->
-<div *ngIf="title === 'Mi propio título'">
-	Hola
-</div>
-
-<h2>{{animales[1]}}</h2>
+<div *ngIf="title === 'Mi propio título'">Hola</div>
 
 <ul>
-	<li *ngFor="let animal of animales; index as i">
-		{{i}}- {{animal}}
-	</li>
+  <li *ngFor="let animal of animales; index as i">{{ i }}- {{ animal }}</li>
 </ul>

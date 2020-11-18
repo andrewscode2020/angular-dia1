@@ -8,5 +8,10 @@ import { Component, VERSION } from "@angular/core";
 export class AppComponent {
   // name = "Angular " + VERSION.major;
   title = "Mi propio título";
-  animales = ["perro", "gato", "pájaro"];
+  nombreAnimal = '';
+  animales = [];
+
+  agregarAnimal() {
+    this.animales.push(this.nombreAnimal)
+  }
 }
